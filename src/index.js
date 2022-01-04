@@ -1,14 +1,15 @@
 const express = require('express')
 const morgan = require('morgan');
-const handlebars = require('express-handlebars');
+const path = require('path');
+const { engine  } = require('express-handlebars');
 //import { engine } from 'express-handlebars';
 const app = express()
 const port = 3000
 
 //Handlebars
-app.engine('handlebars', handlebars());
+app.engine('handlebars', engine({ extname: '.hbs', defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
-app.set('views', '.src/views');
+app.set('views', path.resolve(__dirname,'views'));
 
 //HTTP logger
 app.use(morgan('combined'))
