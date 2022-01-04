@@ -2,9 +2,9 @@
   "name": "nmmmmh",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/urnotjssc/nmmmmh#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "handlebars": "^4.7.7"
+    "express-handlebars": "^6.0.2"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
