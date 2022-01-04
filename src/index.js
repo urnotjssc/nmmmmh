@@ -7,8 +7,10 @@ const app = express()
 const port = 3000
 
 //Handlebars
-app.engine('handlebars', engine({ extname: '.hbs', defaultLayout: "main"}));
-app.set('view engine', 'handlebars');
+app.engine('hbs', engine({ 
+    extname :'.hbs'
+    }));
+app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname,'views'));
 
 //HTTP logger
