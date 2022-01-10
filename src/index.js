@@ -8,6 +8,9 @@ const app = express();
 const port = 3000;
 //Static file
 app.use(express.static(path.join(__dirname,'public')));
+//
+app.use(express.urlencoded());
+app.use(express.json());
 
 //Handlebars
 app.engine('hbs', engine({ 
@@ -18,10 +21,19 @@ app.set('views', path.resolve(__dirname,'views'));
 
 //HTTP logger
 app.use(morgan('combined'))
-
+//
 app.get('/', (req, res) => {
   res.render('home');
 })
+
+app.get('/search', (req,res) => {
+  res.render('search')
+})
+app.post('/search', (req,res) => {
+  console.log(req.body)
+  res.send('')
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
