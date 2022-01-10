@@ -1,10 +1,13 @@
 const express = require('express')
 const morgan = require('morgan');
 const path = require('path');
-const { engine  } = require('express-handlebars');
+const { engine } = require('express-handlebars');
+
 //import { engine } from 'express-handlebars';
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
+//Static file
+app.use(express.static(path.join(__dirname,'public')));
 
 //Handlebars
 app.engine('hbs', engine({ 

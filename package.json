@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
+    "convertCSS":"node-sass -w src/scss -o src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/urnotjssc/nmmmmh#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "node-sass": "^7.0.1"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
