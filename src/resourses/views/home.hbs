@@ -1,1 +1,19 @@
-<h1>Hello world</h1>
+
+<div class ="row">
+    {{#each users}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <a href="users/{{this.username}}">
+                    <img class="card-img-top" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="{{this.username}}">
+                </a>
+                <div class="card-body">
+                    <a href="users/{{this.username}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                    </a>
+                    <p class="card-text">SaveSYS member</p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

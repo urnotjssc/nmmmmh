@@ -1,20 +1,11 @@
 const usersRouter = require('./users')
-
+const homeRouter = require('./home')
+const registerRouter = require('./register')
 function route(app){
 
     app.use('/users', usersRouter)
+    app.use('/home', homeRouter)
+    app.use('/register', registerRouter)
 };
-
-    // app.get('/', (req, res) => {
-    //     res.render('home');
-    //   });
-      
-    //   app.get('/search', (req,res) => {
-    //     res.render('search')
-    //   });
-    //   app.post('/search', (req,res) => {
-    //     //console.log(req.body)
-    //     res.send('')
-    //   });
 
 module.exports = route

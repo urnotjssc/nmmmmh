@@ -2,9 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const usersController = require('../app/controllers/usersController')
-
-router.get('/:id', usersController.show)
-router.get('/', usersController.index)
-
+//abc.com/users/username
+router.get('/:username', usersController.show_user)
 
 module.exports = router;
